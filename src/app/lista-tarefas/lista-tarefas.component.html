@@ -9,17 +9,17 @@
         c. Adicione um botão que permita adicionar novos itens à matriz e atualizar a lista exibida automaticamente.
     </p>
 
+    <h2>Lista de Tarefas</h2>
     <ul>
         <li *ngFor="let tarefa of tarefas">
             <strong>{{tarefa.nome}}</strong>: {{tarefa.descricao}}
         </li>
     </ul>
 
-    <button (click)="adicionarTarefa()">
+    <button class="btn btn-primary" (click)="adicionarTarefa()">
         {{addBotao}}
     </button>
 
-    <h2>Lista de Tarefas</h2>
     <form>
         <div class="mb-3">
             <label for="nomeTarefa" class="form-label">Nome da Tarefa</label>

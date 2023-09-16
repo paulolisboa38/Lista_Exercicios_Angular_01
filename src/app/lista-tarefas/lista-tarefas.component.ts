@@ -8,7 +8,6 @@ import { TarefaModel } from 'src/shared/models/tarefaModel';
 })
 
 export class ListaTarefasComponent {
-
   addBotao: string = "Adicionar Tarefa";
   novaTarefaNome: string = "";
   novaTarefaDescricao: string = "";
@@ -20,7 +19,6 @@ export class ListaTarefasComponent {
   ]
 
   adicionarTarefa() {
-    console.log('Método adicionarTarefa chamado');
     if (this.novaTarefaNome && this.novaTarefaDescricao) {
       const novaTarefa = new TarefaModel(
         this.novaTarefaNome,
