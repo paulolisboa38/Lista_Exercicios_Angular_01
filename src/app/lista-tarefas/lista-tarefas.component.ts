@@ -8,22 +8,30 @@ import { TarefaModel } from 'src/shared/models/tarefaModel';
 })
 
 export class ListaTarefasComponent {
+
+  addBotao: string = "Adicionar Tarefa";
+  novaTarefaNome: string = "";
+  novaTarefaDescricao: string = "";
+
   tarefas: TarefaModel[] = [
     new TarefaModel("Varrer", "Varrer o chão"),
     new TarefaModel("Lavar louça", "Lavar toda a louça suja"),
     new TarefaModel("Estudar", "Participar das aulas e fazer as atividades")
   ]
-  
-  addBotao: string = "Adicionar Tarefa";
-  novaTarefaNome: string = "";
-  novaTarefaDescricao: string = "";
 
   adicionarTarefa() {
-    
-
-    const novaTarefa = new TarefaModel(`Tarefa ${this.tarefas.length + 1}`, `Esta é a tarefa ${this.tarefas.length + 1}`);
-    this.tarefas.push(novaTarefa);
+    console.log('Método adicionarTarefa chamado');
+    if (this.novaTarefaNome && this.novaTarefaDescricao) {
+      const novaTarefa = new TarefaModel(
+        this.novaTarefaNome,
+        this.novaTarefaDescricao
+      )
+      this.tarefas.push(novaTarefa);
+      this.novaTarefaNome = '';
+      this.novaTarefaDescricao = '';
+    }
+    else {
+      console.log("Inserir nome e descrição das tarefas.");
+    }
   }
-
-
 }
