@@ -1,0 +1,32 @@
+<div class="m-3">
+    <h6>2. ngFor:</h6>
+    <p>
+        a. Crie um componente que contenha uma matriz de objetos (por exemplo, uma lista de tarefas com nome e
+        descrição).
+        <br>
+        b. Use ngFor para iterar pela matriz e exibir cada item em uma lista não ordenada (ul).
+        <br>
+        c. Adicione um botão que permita adicionar novos itens à matriz e atualizar a lista exibida automaticamente.
+    </p>
+<!-- 
+    <h2>Lista de Tarefas</h2>
+    <form>
+        <div class="mb-3">
+            <label for="nomeTarefa" class="form-label">Nome da Tarefa</label>
+            <input type="text" class="form-control" id="nomeTarefa" [(ngModel)]="novaTarefaNome">
+        </div>
+        <div class="mb-3">
+            <label for="descricaoTarefa" class="form-label">Descrição da Tarefa</label>
+            <input type="text" class="form-control" id="descricaoTarefa" [(ngModel)]="novaTarefaDescricao">
+          </div>
+    </form> -->
+ 
+    <ul>
+        <li *ngFor="let tarefa of tarefas">
+            <strong>{{tarefa.nome}}</strong>: {{tarefa.descricao}}
+        </li>
+    </ul>
+    <button (click)="adicionarTarefa()">
+        {{addBotao}}
+    </button>
+</div>
