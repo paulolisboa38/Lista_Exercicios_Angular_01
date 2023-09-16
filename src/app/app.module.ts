@@ -17,4 +17,5 @@ import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
