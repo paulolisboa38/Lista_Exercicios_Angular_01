@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
+import { Exercicio03Component } from './exercicio03/exercicio03.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaTarefasComponent
+    ListaTarefasComponent,
+    Exercicio03Component
   ],
   imports: [
     BrowserModule,
