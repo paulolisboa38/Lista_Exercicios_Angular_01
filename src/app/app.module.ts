@@ -9,6 +9,8 @@ import { Exercicio04Component } from './exercicio04/exercicio04.component';
 import { Exercicio05Component } from './exercicio05/exercicio05.component';
 import { Exercicio06Component } from './exercicio06/exercicio06.component';
 import { Exercicio07Component } from './exercicio07/exercicio07.component';
+import { Exercicio08Component } from './exercicio08/exercicio08.component';
+import { FiltrarPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { Exercicio07Component } from './exercicio07/exercicio07.component';
     Exercicio04Component,
     Exercicio05Component,
     Exercicio06Component,
-    Exercicio07Component
+    Exercicio07Component,
+    Exercicio08Component,
+    FiltrarPipe
   ],
   imports: [
     BrowserModule,
