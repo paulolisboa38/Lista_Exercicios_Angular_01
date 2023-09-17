@@ -1,0 +1,29 @@
+<div class="m-3">
+    <h6>7. ngIf:</h6>
+    <p>
+        a. Crie um componente que permita ao usuário alternar entre vários painéis de informações usando botões de
+        navegação.
+        <br>
+        b. Use ngIf para mostrar apenas o painel selecionado e ocultar os outros.
+    </p>
+    <div class="container">
+        <button (click)="mostrarPainel('painel1')">Mostrar Painel 1</button>
+        <button (click)="mostrarPainel('painel2')">Mostrar Painel 2</button>
+        <button (click)="mostrarPainel('painel3')">Mostrar Painel 3</button>
+
+        <div *ngIf="painelAtual === 'painel1'">
+            <h2>Painel 1</h2>
+            <p>Informações do Painel 1</p>
+        </div>
+
+        <div *ngIf="painelAtual === 'painel2'">
+            <h2>Painel 2</h2>
+            <p>Informações do Painel 2</p>
+        </div>
+
+        <div *ngIf="painelAtual === 'painel3'">
+            <h2>Painel 3</h2>
+            <p>Informações do Painel 3</p>
+        </div>
+    </div>
+    </div>
