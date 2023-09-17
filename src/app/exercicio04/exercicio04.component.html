@@ -1,0 +1,28 @@
+<div class="m-3">
+    <h6>4. ngIf:</h6>
+    <p>
+        a. Crie um componente de formulário de login com campos de entrada para nome de usuário e senha.
+        <br>
+        b. Use ngIf para exibir uma mensagem de erro quando as credenciais inseridas forem incorretas.
+        <br>
+        c. Utilize uma função para verificar as credenciais e mostrar a mensagem de erro apenas quando necessário.
+    </p>
+
+    <form>
+        <div class="mb-4">
+            <label for="usuário">Digite o usuário</label>
+            <input type="text" class="form-control" placeholder="Usuário" [(ngModel)]="usuario" name="usuário">
+        </div>
+        <div class="mb-4">
+            <label for="senha">Digite sua senha</label>
+            <input type="password" class="form-control" placeholder="Senha" [(ngModel)]="senha" name="senha">
+        </div>
+        <button type="button" (click)="verificarCredenciais()">Entrar</button>
+        <div *ngIf="mostrarMensagem">
+            <p>
+                {{mensagem}}
+            </p>
+        </div>
+    </form>
+
+</div>
