@@ -1,0 +1,24 @@
+<div class="m-3">
+    <h6>6. ngModel:</h6>
+    <p>
+        a. Crie um componente de calculadora simples que permita ao usuário realizar operações básicas de matemática
+        (adição, subtração, multiplicação e divisão).
+        <br>
+        b. Use ngModel para vincular os campos de entrada aos valores de entrada e exibir o resultado da operação.
+    </p>
+    <!-- src/app/calculadora/calculadora.component.html -->
+    <div class="container">
+        <h2>Calculadora Simples</h2>
+        <input type="number" [(ngModel)]="numero1" placeholder="Número 1">
+        <select [(ngModel)]="operacao">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" [(ngModel)]="numero2" placeholder="Número 2">
+        <button (click)="calcular()">Calcular</button>
+        <p>Resultado: {{resultado}}</p>
+    </div>
+
+</div>
