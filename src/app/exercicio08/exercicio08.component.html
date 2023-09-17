@@ -1,0 +1,22 @@
+<div class="m-3">
+    <h6>8. ngFor:</h6>
+    <p>
+        a. Crie um componente que exiba uma lista de países e suas respectivas bandeiras.
+        <br>
+        b. Use ngFor para iterar pela lista de países e exibir as bandeiras.
+        <br>
+        c. Adicione um campo de pesquisa que permita ao usuário filtrar os países à medida que digita.
+    </p>
+
+    <div class="container">
+        <input type="text" [(ngModel)]="termoDePesquisa" placeholder="Pesquisar país..." />
+        <div class="p-3">
+            <ul>
+                <li class="col-md-4 mb-4" *ngFor="let pais of paises | filtrar:termoDePesquisa">
+                    <img [src]="pais.bandeira" alt="{{pais.nome}}" width="50" height="50" /> {{pais.nome}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

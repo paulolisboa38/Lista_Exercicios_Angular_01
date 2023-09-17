@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class Exercicio07Component {
-  // Inicialize com o painel que você deseja mostrar primeiro
   painelAtual: string = 'painel1';
-  
+
   mostrarPainel(painel: string): void {
     this.painelAtual = painel;
   }
