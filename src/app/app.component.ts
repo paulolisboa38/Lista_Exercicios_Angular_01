@@ -8,13 +8,10 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Lista Exercícios Angular 01';
-
-  mostrarOcultar: string = "Mostrar/Ocultar Texto";
   mostrarTexto: boolean = false;
-  texto: string = "Este é o texto que será mostrado ou ocultado.";
+  texto: string = "Mostrando texto que estava oculto.";
 
   alternarTexto() {
     this.mostrarTexto = !this.mostrarTexto;
-    this.mostrarOcultar = this.mostrarTexto ? "Ocultar Texto" : "Mostrar Texto";
   }
 }
