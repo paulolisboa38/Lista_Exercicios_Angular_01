@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-exercicio11',
@@ -17,11 +18,14 @@ export class Exercicio11Component {
 
   imagemModal: any = null;
 
+  // constructor(private activeModal: NgbActiveModal) { }
+
   abrirModal(index: number) {
     this.imagemModal = this.imagens[index];
   }
 
   fecharModal() {
     this.imagemModal = null;
+    // this.imagemModal.close();
   }
 }
