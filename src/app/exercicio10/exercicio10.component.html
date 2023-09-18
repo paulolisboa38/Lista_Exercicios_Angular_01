@@ -1,0 +1,19 @@
+<div class="m-3">
+    <h6>10. ngIf:</h6>
+    <p>
+        a. Crie um componente que exiba um perfil de usuário com detalhes pessoais.
+        <br>
+        b. Use ngIf para mostrar informações adicionais apenas quando o usuário escolher exibir mais detalhes.
+    </p>
+    <div class="m-4">
+        <h1>{{ usuario.nome }}</h1>
+        <p>Email: {{ usuario.email }}</p>
+        <p>Age: {{ usuario.idade }}</p>
+        <button (click)="alternarDetalhesAdicionais()">
+            {{ mostrarDetalhes ? "Ocultar" : "Mostrar" }} Detalhes
+        </button>
+        <div *ngIf="mostrarDetalhes">
+            <p>{{ usuario.detalhesAdicionais }}</p>
+        </div>
+    </div>
+</div>
