@@ -1,0 +1,13 @@
+<div class="m-3">
+    <h6>1. ngIf:</h6>
+    <p>
+        a. Crie um componente que contenha uma variável booleana chamada mostrarTexto. Use ngIf para mostrar ou ocultar
+        um
+        elemento de texto com base no valor de mostrarTexto. Adicione botões que permitam alternar o valor de
+        mostrarTexto.
+    </p>
+    <button (click)="alternarTexto()">
+        {{mostrarTexto ? "Ocultar" : "Mostrar"}} Texto
+    </button>
+    <p *ngIf="mostrarTexto">{{texto}}</p>
+</div>
