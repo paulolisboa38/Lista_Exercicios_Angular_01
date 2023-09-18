@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class Exercicio13Component {
-  lampOn = false;
+  lampadaAcesa = false;
 
-  toggleLamp() {
-    this.lampOn = !this.lampOn;
+  alternarInterruptor() {
+    this.lampadaAcesa = !this.lampadaAcesa;
   }
 }

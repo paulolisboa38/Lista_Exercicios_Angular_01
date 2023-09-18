@@ -6,12 +6,12 @@
         b. Use ngIf para alternar entre as imagens de uma lâmpada acesa e apagada quando o usuário clica no interruptor.
     </p>
     <div class="container">
-        <button (click)="toggleLamp()" class="btn btn-primary">
+        <button (click)="alternarInterruptor()" class="btn btn-primary">
             Interruptor
         </button>
         <div>
-            <img *ngIf="lampOn" src="assets/img/lampadaAcesa.jpeg" alt="Lamp On">
-            <img *ngIf="!lampOn" src="assets/img/lampadaApagada.jpeg" alt="Lamp Off">
+            <img *ngIf="lampadaAcesa" src="assets/img/lampadaAcesa.jpeg" alt="Lampada acesa">
+            <img *ngIf="!lampadaAcesa" src="assets/img/lampadaApagada.jpeg" alt="Lampada apagada">
         </div>
     </div>
 </div>
