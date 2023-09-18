@@ -1,0 +1,32 @@
+<div class="m-3">
+    <h6>11. ngFor:</h6>
+    <p>
+        a. Crie um componente que exiba uma galeria de imagens.
+        <br>
+        b. Use ngFor para criar um loop pelas imagens e permitir que o usuário clique em uma imagem para ampliá-la em um
+        modal.
+    </p>
+
+    <h2>Galeria de Imagens</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let imagem of imagens; let i = index">
+                <img [src]="imagem.url" class="img-thumbnail" (click)="abrirModal(i)">
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="imagemModal">
+        <div class="modal-backdrop" (click)="fecharModal()"></div>
+        <div class="modal">
+            <img [src]="imagemModal.url">
+            <button (click)="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+    <div *ngIf="imagemModal">
+        {{ imagemModal | json }}
+    </div>
+
+
+</div>
