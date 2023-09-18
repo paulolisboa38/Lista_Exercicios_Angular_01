@@ -1,0 +1,26 @@
+<div class="m-3">
+    <h6>9. ngModel:</h6>
+    <p>
+        a. Crie um componente de lista de tarefas com campos de entrada para adicionar tarefas.
+        <br>
+        b. Use ngModel para adicionar tarefas à lista e permitir a exclusão de tarefas existentes.
+    </p>
+
+    <div class="container">
+        <div class="input-group mb-3" >
+            <span class="input-group-text">Nome e Descrição da Tarefa</span>
+            <input type="text" aria-label="First name" class="form-control" placeholder="Nome" [(ngModel)]="novaTarefaNome">
+            <input type="text" aria-label="Last name" class="form-control" placeholder="Descrição" [(ngModel)]="novaTarefaDescricao">
+        </div>
+        <button (click)="adicionarTarefa()" class="btn btn-primary mb-3">Adicionar Tarefa</button>
+        <h2>Lista de Tarefas</h2>
+        <ul class="list-group">
+            <li *ngFor="let tarefa of tarefas; let i = index"
+                class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>{{tarefa.nome}}</strong> {{tarefa.descricao}}
+                <button (click)="excluirTarefa(i)" class="btn btn-danger">Excluir</button>
+            </li>
+        </ul>
+    </div>
+
+</div>
