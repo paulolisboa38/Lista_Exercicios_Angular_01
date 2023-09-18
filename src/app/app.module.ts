@@ -4,7 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { FiltrarPipe } from './pipes/filter.pipe';
-import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Exercicio01Component } from './exercicio01/exercicio01.component';
+import { Exercicio02Component } from './exercicio02/exercicio02.component';
 import { Exercicio03Component } from './exercicio03/exercicio03.component';
 import { Exercicio04Component } from './exercicio04/exercicio04.component';
 import { Exercicio05Component } from './exercicio05/exercicio05.component';
@@ -21,7 +23,8 @@ import { Exercicio13Component } from './exercicio13/exercicio13.component';
   declarations: [
     AppComponent,
     FiltrarPipe,
-    ListaTarefasComponent,
+    Exercicio01Component,
+    Exercicio02Component,
     Exercicio03Component,
     Exercicio04Component,
     Exercicio05Component,
@@ -36,7 +39,8 @@ import { Exercicio13Component } from './exercicio13/exercicio13.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
